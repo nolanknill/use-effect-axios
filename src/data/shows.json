@@ -1,0 +1,44 @@
+[
+    {
+        "createdAt": "2023-07-17T20:41:12.575Z",
+        "title": "Breaking Bad",
+        "image_src": "https://upload.wikimedia.org/wikipedia/en/e/e0/BreakingBadS2DVD.jpg",
+        "rating": 10,
+        "id": "1"
+    },
+    {
+        "createdAt": "2023-07-18T13:41:30.742Z",
+        "title": "House of the Dragon",
+        "image_src": "https://m.media-amazon.com/images/M/MV5BZjBiOGIyY2YtOTA3OC00YzY1LThkYjktMGRkYTNhNTExY2I2XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1000_.jpg",
+        "rating": 10,
+        "id": "2"
+    },
+    {
+        "createdAt": "2023-07-18T08:53:22.281Z",
+        "title": "Squid Game",
+        "image_src": "https://wp.umpi.edu/utimes/files/2022/04/Netflixs-Squid-Game-Cover-Art-691x1024.jpeg",
+        "rating": 10,
+        "id": "3"
+    },
+    {
+        "createdAt": "2023-07-18T09:45:37.226Z",
+        "title": "True Detective",
+        "image_src": "https://upload.wikimedia.org/wikipedia/en/3/37/True_Detective_season_1.png",
+        "rating": 21,
+        "id": "4"
+    },
+    {
+        "createdAt": "2023-07-17T16:18:36.759Z",
+        "title": "Lost",
+        "image_src": "https://m.media-amazon.com/images/M/MV5BNzhlY2E5NDUtYjJjYy00ODg3LWFkZWQtYTVmMzU4ZWZmOWJkXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_FMjpg_UX1000_.jpg",
+        "rating": "5",
+        "id": "7"
+    },
+    {
+        "createdAt": "2023-07-18T08:53:52.523Z",
+        "title": "Pokemon",
+        "image_src": "https://i1.sndcdn.com/artworks-000035966536-cg4fwp-t500x500.jpg",
+        "rating": "151",
+        "id": "8"
+    }
+]

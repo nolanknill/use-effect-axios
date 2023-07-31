@@ -4,7 +4,7 @@ function Home() {
     const params = useParams();
 
     console.log("This function is running!");
-    console.log("params", params);
+    console.log("Params: ", params);
 
     return (
         <>
