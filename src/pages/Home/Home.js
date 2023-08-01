@@ -1,19 +1,48 @@
+import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import axios from "axios";
+import Show from "../../components/Show/Show";
 
 function Home() {
-    const params = useParams();
+    const [isLoading, setIsLoading] = useState(true);
+    const [hasError, setHasError] = useState(false);
+    const [shows, setShows] = useState([]);
+    const { id } = useParams();
 
-    console.log("This function is running!");
-    console.log("Params: ", params);
+    useEffect(() => {
+        axios
+            .get("https://62f1099325d9e8a2e7c47836.mockapi.io/api/v1/shows")
+            .then((response) => {
+                setShows(response.data);
+                setIsLoading(false);
+            })
+            .catch((error) => {
+                console.log(error);
+                setHasError(true);
+            })
+    }, [])
+
+    if (isLoading) {
+        return <p>Loading...</p>
+    }
+
+    if (hasError) {
+        return <p>Server error, sorry. It's not you, it's me. Sorry again.</p>
+    }
+    
+    const showId = id || shows[0].id;
 
     return (
         <>
             <ul>
                 <li><Link to="/">Home</Link></li>
-                <li><Link to="/tv-shows/1">TV Show 1</Link></li>
-                <li><Link to="/tv-shows/2">TV Show 2</Link></li>
+                {shows.map((show) => {
+                    return (
+                        <li><Link to={`/tv-shows/${show.id}`}>{show.title}</Link></li>
+                    )
+                })}
             </ul>
-            <h2>TV Show #: {params.id}</h2>
+            <Show id={showId} />
         </>
     );
 }
